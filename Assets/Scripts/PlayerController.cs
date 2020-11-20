@@ -8,14 +8,20 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 40f;
 
     float horizontalMove = 0f;
+    bool jump = false;
     
     
     void Update()
     {
         horizontalMove= Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Jump")){
+            jump = true;
+        }
     }
 
     private void FixedUpdate() {
-        controller.Move(horizontalMove * runSpeed * Time.fixedDeltaTime, false, false);
+        controller.Move(horizontalMove * runSpeed * Time.fixedDeltaTime, false, jump);
+        jump = false;
     }
 }

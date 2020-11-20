@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 932621820}
   - component: {fileID: 932621819}
   - component: {fileID: 932621823}
+  - component: {fileID: 932621824}
   m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
@@ -933,12 +934,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 2
+  m_Material: {fileID: 6200000, guid: 46c2a39f5150edb44a19ecfd6ae352e9, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &932621820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,8 +952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5994a06da1cff7f4a808e5501d283dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
-  m_CrouchSpeed: 0
+  m_JumpForce: 600
+  m_CrouchSpeed: 1
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -1026,7 +1027,7 @@ Transform:
   m_GameObject: {fileID: 932621818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.51, y: -0.75, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 738435885}
   - {fileID: 1252311551}
@@ -1042,7 +1043,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 932621818}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 46c2a39f5150edb44a19ecfd6ae352e9, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1059,6 +1060,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23, y: 0.27856734}
   m_EdgeRadius: 0
+--- !u!114 &932621824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932621818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dc47aa6bf33b8408074eadb1d7be8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 932621820}
+  runSpeed: 40
 --- !u!1 &1252311550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1098,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252311550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.113, z: -8.781901}
+  m_LocalPosition: {x: 0, y: 0.102, z: -8.781901}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 932621822}
